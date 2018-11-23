@@ -10,10 +10,7 @@ class Clock {
     this.printTime();
     
     // 4. Schedule the tick at 1 second intervals.
-    setInterval(this._tick.bind(this), 1000);
-    
-    // this = clock object with time set to when we create new Date object
-    
+    setInterval(this._tick, 1000);
   }
 
   printTime() {
@@ -25,17 +22,12 @@ class Clock {
   _tick() {
     // 1. Increment the time by one second.
     // 2. Call printTime.
-    
-    // this = previous clock object (with time of previous second)
-    
+
     this.seconds += 1;
     if (this.seconds === 60) {
       this.seconds = 0;
       this.update_minutes();
     }
-    
-    // this = updated clock object (with current time)
-    
     this.printTime(); // prints the time of the updated clock object
   }
   
