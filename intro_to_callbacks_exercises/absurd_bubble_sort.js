@@ -39,12 +39,10 @@ function absurdBubbleSort(arr, sortCompletionCallback) {
   outerBubbleSortLoop(true);
 }
 
-function callback1(arr) {
-  console.log(arr);
-  return;
-}
-
-absurdBubbleSort([3, 2, 1], callback1);
+absurdBubbleSort([3, 2, 1], function (arr) {
+  console.log("Sorted array: " + JSON.stringify(arr));
+  reader.close();
+});
 
 // 
 // innerBubbleSortLoop([3,2,1], 0, false);

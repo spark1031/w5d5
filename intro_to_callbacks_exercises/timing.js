@@ -10,7 +10,7 @@ class Clock {
     this.printTime();
     
     // 4. Schedule the tick at 1 second intervals.
-    setInterval(this._tick, 1000);
+    setInterval(this._tick.bind(this), 1000);
   }
 
   printTime() {
